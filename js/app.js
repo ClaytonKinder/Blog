@@ -48,6 +48,7 @@ var page = {
       var newSubmission = {
         submissionTitle: $('#writeTitle').val(),
         submissionAuthor: $('#writeAuthor').val(),
+        submissionAuthorImage: '<img src="img/me.jpg">',
         submissionType: $('#writeType').val(),
         submissionTime: moment().format('MMMM Do YYYY, h:mm a'),
         submissionContent: $('#writeContent').val()
