@@ -69,7 +69,7 @@ NAVBAR
 **************************/
 
 #navbar {
-  display: block;
+  display: none;
   position: fixed;
   width: 100%;
   height: 50px;
@@ -138,32 +138,24 @@ header {
   }
 }
 
-#header-arrow-wrapper {
-  display: table;
-  height: 10%;
-  width: 100%;
+i.fa-chevron-down {
+  cursor: pointer;
+  height: 96px;
+  width: 96px;
+  display: block;
+  position: absolute;
+  margin: 0 auto;
 
-  #header-arrow-block {
-    display: block;
-    text-align: center;
-    vertical-align: bottom;
+  right: 0;
+  bottom: 128px;
+  left: 0;
+  color: $transparentWhite;
+  animation-duration: 3s;
+  animation-name: gestureDown;
+  animation-iteration-count: infinite;
 
-    button {
-      background: none;
-      border: none;
-
-      &:focus {
-        outline: none;
-      }
-
-      i {
-        font-size: 2rem;
-        color: $transparentWhite;
-        animation-duration: 3s;
-        animation-name: gestureDown;
-        animation-iteration-count: infinite;
-      }
-    }
+  &:before {
+    font-size: 3rem;
   }
 }
 
@@ -207,6 +199,7 @@ article h2 {
 }
 
 .article-content {
+
   blockquote {
     border-left: .4em solid $red1;
     margin: 1.75em 0 1.75em -2.2em;
@@ -575,11 +568,16 @@ QUERIES
 
   #article-wrapper {
     width: 90%;
+
+    .article-content {
+
+      blockquote {
+        margin: 1.75em 0 1.75em 0em;
+      }
+
+    }
   }
 
-  blockquote {
-    margin: 1.75em 0 1.75em 0em;
-  }
 
   /**************************
   FOOTER

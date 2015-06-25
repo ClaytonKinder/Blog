@@ -15,7 +15,7 @@ var page = {
 
   initStyling: function() {
     page.loadSubmissions();
-
+    $('#navbar').show();
   },
 
 
