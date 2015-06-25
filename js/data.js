@@ -12,7 +12,7 @@ templates.submission = [
     '</div>',
     '<div class="article-author-block">',
       '<div class="article-author-image">',
-        '<img src="img/me.jpg">',
+        '<%= submissionAuthorImage %>',
       '</div>',
       '<div class="article-author-info">',
         '<span class="article-author-name"><%= submissionAuthor %></span>',
