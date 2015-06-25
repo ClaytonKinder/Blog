@@ -206,45 +206,47 @@ article h2 {
   color: $red1;
 }
 
-blockquote {
-  border-left: .4em solid $red1;
-  margin: 1.75em 0 1.75em -2.2em;
-  padding: 0 0 0 1.75em;
+.article-content {
+  blockquote {
+    border-left: .4em solid $red1;
+    margin: 1.75em 0 1.75em -2.2em;
+    padding: 0 0 0 1.75em;
 
-  .blockquote-text {
-    font-style: italic;
-    font-weight: 300;
-    color: $red1;
+    .blockquote-text {
+      font-style: italic;
+      font-weight: 300;
+      color: $red1;
+    }
+
+    .blockquote-author {
+      margin-top: 5px;
+      font-weight: bold;
+      color: $red1;
+    }
   }
 
-  .blockquote-author {
-    margin-top: 5px;
-    font-weight: bold;
-    color: $red1;
-  }
-}
+  .gallery-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
 
-.gallery-row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  display: -webkit-flex;
-  -webkit-justify-content: space-between;
-
-  .gallery-row-half {
-    width: 49%;
-    display: inline-block;
+    .gallery-row-half {
+      width: 49%;
+      display: inline-block;
+    }
   }
 }
 
 .article-author-block {
   width: 100%;
-  max-width: 360px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: table;
 
   > div {
+    display: table-cell;
+    vertical-align: middle;
+    margin-right: 10px;
     font-size: 0.5rem;
     color: $gray1;
   }
@@ -310,7 +312,7 @@ footer {
             background-color: $navy1;
             width: 50px;
             position: absolute;
-            top: -7.5px;
+            top: -8.5px;
             left: 15px;
           }
 
@@ -423,6 +425,77 @@ footer {
 }
 
 /**************************
+WRITE
+**************************/
+
+#writeWrapper {
+  max-width: 960px;
+  margin: 50px auto;
+  display: flex;
+
+  #writeForm {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      width: 100%;
+
+      #markItUpWriteContent {
+        width: 100%;
+      }
+    }
+
+    #writeAuthorBlock {
+      width: 40%;
+      text-align: center;
+      margin-bottom: 25px;
+
+      input {
+
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+
+    #writeTitleBlock {
+      width: 40%;
+      text-align: center;
+      margin-bottom: 25px;
+
+      input {
+
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+
+    #writeTypeBlock {
+      width: 20%;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    #writeContent {
+      min-height: 400px;
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 25px;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    #writeSubmit {
+      width: 100%;
+    }
+  }
+}
+
+/**************************
 QUERIES
 **************************/
 
@@ -521,7 +594,7 @@ QUERIES
         order: 2;
 
         h3 {
-          border-bottom: 2px solid white;
+          text-decoration: underline;
           margin-bottom: 35px;
         }
       }
@@ -531,7 +604,7 @@ QUERIES
         margin-bottom: 50px;
 
         h3 {
-          border-bottom: 2px solid white;
+          text-decoration: underline;
           margin-bottom: 35px;
         }
       }
@@ -588,6 +661,10 @@ QUERIES
 
   .article-title {
     text-align: center;
+  }
+
+  .article-author-block {
+    margin: 0 auto;
   }
 
   /**************************
@@ -652,15 +729,6 @@ QUERIES
     font-size: 0.6rem;
   }
 
-  .article-author-block {
-    width: 90%;
-    margin: 0 auto;
-
-    > div {
-      font-size: 0.40rem;
-    }
-  }
-
   /**************************
   FOOTER
   **************************/
@@ -720,15 +788,6 @@ QUERIES
   /**************************
   ARTICLE
   **************************/
-
-  .article-author-block {
-    width: 90%;
-    margin: 0 auto;
-
-    > div {
-      font-size: 0.30rem;
-    }
-  }
 
   /**************************
   FOOTER

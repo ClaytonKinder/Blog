@@ -6,7 +6,8 @@
   <title>HTMLol</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,300|Roboto:400,100,700,400italic,100italic,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -34,102 +35,7 @@
   </header>
   <main>
     <div id="article-wrapper">
-      <article>
-        <div class="article-title">
-          <h2>Article Title</h2>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sequi nesciunt odit modi impedit iusto delectus non in harum, animi totam ut accusantium dicta laudantium velit, rem officia asperiores libero!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptas, placeat cupiditate doloremque reiciendis earum fugit magni. Quas dolor, sit aperiam <a href="#">laudantium porro expedita</a> amet aspernatur nulla nostrum exercitationem, eveniet.
-        </p>
-        <blockquote>
-          <div class="blockquote-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero dolor provident repellendus. Possimus aliquid eos magnam nobis adipisci officiis quos illum error, eligendi veniam nostrum hic, animi maiores autem dolorem.
-          </div>
-          <div class="blockquote-author">
-            - Nicholas Cage
-          </div>
-        </blockquote>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure minus id maiores incidunt sequi sit, molestiae nulla consequuntur inventore minima perspiciatis. Sequi vero rerum distinctio nisi nobis, quam adipisci temporibus?
-        </p>
-        <div class="gallery-row">
-          <div class="gallery-row-half">
-            <img src="http://www.placehold.it/400x200">
-          </div>
-          <div class="gallery-row-half">
-            <img src="http://www.placehold.it/400x200">
-          </div>
-        </div>
-        <div class="gallery-row">
-          <div class="gallery-row-full">
-            <img src="http://www.placehold.it/800x200">
-          </div>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, facilis. Aliquam, ex facilis. Repudiandae, harum, ad commodi tempore doloribus modi ducimus consectetur aliquid in tempora libero magnam. Incidunt, eligendi.
-        </p>
-        <div class="article-author-block">
-          <div class="article-author-image">
-            <img src="img/me.jpg">
-          </div>
-          <div class="article-author-name">
-            Clayton Kinder
-          </div>
-          <div class="article-author-pipe">
-            |
-          </div>
-          <div class="article-author-category">
-            Article
-          </div>
-          <div class="article-author-pipe">
-            |
-          </div>
-          <div class="article-author-date">
-            May 29, 2015
-          </div>
-        </div>
-      </article>
-
-      <article>
-        <div class="article-title">
-          <h2>Article Title</h2>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sequi nesciunt odit modi impedit iusto delectus non in harum, animi totam ut accusantium dicta laudantium velit, rem officia asperiores libero!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptas, placeat cupiditate doloremque reiciendis earum fugit magni. Quas dolor, sit aperiam laudantium porro expedita amet aspernatur nulla nostrum exercitationem, eveniet.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure minus id maiores incidunt sequi sit, molestiae nulla consequuntur inventore minima perspiciatis. Sequi vero rerum distinctio nisi nobis, quam adipisci temporibus?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, facilis. Aliquam, ex facilis. Repudiandae, harum, ad commodi tempore doloribus modi ducimus consectetur aliquid in tempora libero magnam. Incidunt, eligendi.
-        </p>
-        <div class="article-author-block">
-          <div class="article-author-image">
-            <img src="img/me.jpg">
-          </div>
-          <div class="article-author-name">
-            Clayton Kinder
-          </div>
-          <div class="article-author-pipe">
-            |
-          </div>
-          <div class="article-author-category">
-            Article
-          </div>
-          <div class="article-author-pipe">
-            |
-          </div>
-          <div class="article-author-date">
-            May 29, 2015
-          </div>
-        </div>
-      </article>
+      <!-- LOADED SUBMISSIONS GO HERE -->
     </div>
     <footer>
       <div id="footer-wrapper">
@@ -176,7 +82,10 @@
     </footer>
   </main>
 
-  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+  <script type="text/javascript" src="bower_components/moment/moment.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
