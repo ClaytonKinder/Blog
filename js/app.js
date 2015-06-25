@@ -21,6 +21,7 @@ var page = {
 
   initEvents: function(event) {
 
+    // Sets header height to 100% of window height
     $('header').css('height', $(window).height());
 
     $('#header-chevron').on('click', function() {
@@ -29,6 +30,7 @@ var page = {
       }, 500);
     });
 
+    // Clicking on HOME link takes you to the top of the page
     $('#navLinkHome').on('click', function(e) {
       e.preventDefault();
       $('html, body').animate({
@@ -36,6 +38,7 @@ var page = {
       }, 500);
     });
 
+    // Clicking on articles list takes you to start of first article
     $('#navLinkArticles').on('click', function(e) {
       e.preventDefault();
       $('html, body').animate({
@@ -43,12 +46,13 @@ var page = {
       }, 500);
     });
 
+    // Submitting the writeForm posts a submission to the server
     $('#writeForm').on('submit', function(e) {
       e.preventDefault();
       var newSubmission = {
         submissionTitle: $('#writeTitle').val(),
         submissionAuthor: $('#writeAuthor').val(),
-        submissionAuthorImage: '<img src="img/me.jpg">',
+        submissionAuthorImage: '<img src="../img/me.jpg">',
         submissionType: $('#writeType').val(),
         submissionTime: moment().format('MMMM Do YYYY, h:mm a'),
         submissionContent: $('#writeContent').val()
